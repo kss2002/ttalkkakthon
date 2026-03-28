@@ -1,16 +1,80 @@
-# React + Vite
+# 바이러스 야르
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+과거 윈도우 XP 감성을 웹으로 옮긴 바이러스 퇴치형 인터랙티브 게임 서비스입니다.  
+사용자는 바탕화면, 로그인, 추가 확인 절차, OTP, 바이러스 추격까지 이어지는 흐름을 따라가며 일부러 열받게 설계된 UX를 체험하게 됩니다.
 
-Currently, two official plugins are available:
+## 프로젝트 정보
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 프로젝트명: `바이러스 야르`
+- 설명: 컴퓨터의 바이러스를 퇴치해야 하는 웹 게임 서비스
+- 핵심 기능 / 기획 내용: 윈도우 XP 스타일 UI 위에서 로그인, 추가 확인 절차, OTP, 바이러스 추격 등 일부러 불편하고 열받게 설계한 인터랙션 제공
+- 제작 방식 / 사용 도구: `OpenAI Codex`, `VS Code`
+- GitHub URL: <https://github.com/kss2002/ttalkkakthon>
+- 배포 URL: <https://ttalkkakthon-seven.vercel.app>
+- 데모 영상 링크: `추가 예정`
+- 추가 링크: `추가 예정`
 
-## React Compiler
+## 프로젝트 소개
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`바이러스 야르`는 익숙한 윈도우 XP 감성을 활용해 사용자를 일부러 불편하게 만드는 인터랙티브 웹 게임입니다. 랜덤 로그인 아이콘, 추가 확인 절차, 3단계 OTP, 마우스를 피해 도망다니는 바이러스 제거 페이지까지 이어지는 흐름을 통해 "열받는 UX"를 게임처럼 경험하게 합니다. 타겟 사용자는 재미있는 웹 인터랙션과 레트로 감성을 좋아하는 해커톤 심사위원 및 일반 사용자입니다.
 
-## Expanding the ESLint configuration
+## AI 활용 방식
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+개발 과정에서 `OpenAI Codex`를 활용해 XP 스타일 UI 구조 설계, 다단계 페이지 흐름, 드래그 가능한 경고창, 타이머, OTP 로직, 바이러스 추격 인터랙션을 빠르게 반복 구현했습니다. AI는 단순 코드 생성보다도 여러 화면과 상태 전환을 짧은 시간 안에 실험하고 다듬는 역할을 했으며, 특히 해커톤 일정 안에서 복잡한 인터랙션을 완성하는 데 큰 도움이 됐습니다.
+
+## 기술 스택 및 구현
+
+- `React 19`
+- `Vite`
+- `CSS`
+- `Vercel`
+- `ESLint`
+
+기술적으로는 단일 페이지 흐름 안에서 바탕화면, 로그인, 추가 확인, OTP, 바이러스 제거를 자연스럽게 오가도록 상태 기반 라우팅과 UI 전환을 구성했습니다. 또한 타이머, 랜덤 문제 출제, 경고창 중첩, 마우스 반응형 바이러스 움직임 같은 인터랙션 완성도에 신경 썼습니다.
+
+## 차별점 및 의의
+
+이 프로젝트의 차별점은 단순히 "예쁜 UI"가 아니라, 의도적으로 불편한 UX를 게임의 재미로 바꿨다는 점입니다. 윈도우 XP 스타일의 향수와 장난기 있는 흐름을 결합해 기억에 남는 경험을 만들었고, 향후에는 브라우저 기반 레트로 UX 게임이나 인터랙티브 전시형 콘텐츠로 확장할 수 있습니다.
+
+## 핵심 기능
+
+- 윈도우 XP 배경화면과 작업표시줄을 포함한 레트로 데스크톱 UI
+- 바탕화면 아이콘 중 랜덤한 하나만 실제 로그인 페이지로 이동
+- 다른 아이콘 클릭 시 랜덤 안내창 표시
+- 첫 경고창 `확인` 클릭 후 시작되는 10분 타이머
+- XP 스타일 로그인 페이지와 인증서/다른 로그인 흐름
+- 추가 확인 절차용 랜덤 문항 진행
+- 3단계 숫자 기억형 간이 OTP
+- 마우스를 피해 도망다니는 바이러스 제거 페이지
+- 제거 시 다수의 XP 오류창이 화면을 채우는 엔딩 연출
+
+## 제출용 요약
+
+### 1. 프로젝트 소개 (200자 내외)
+
+윈도우 XP 감성을 웹으로 구현한 인터랙티브 바이러스 퇴치 게임 서비스입니다. 사용자는 랜덤 로그인, 추가 확인 절차, OTP, 바이러스 추격까지 이어지는 일부러 열받게 설계된 UX를 경험합니다. 레트로 감성과 장난기 있는 웹 경험을 좋아하는 사용자를 타겟으로 했습니다.
+
+### 2. AI 활용 방식 (200자 내외)
+
+OpenAI Codex를 활용해 XP 스타일 UI, 다단계 페이지 흐름, 타이머, OTP, 경고창, 바이러스 추격 인터랙션을 빠르게 구현하고 반복 수정했습니다. AI 덕분에 짧은 해커톤 시간 안에 복잡한 화면 전환과 상호작용을 촘촘하게 완성할 수 있었습니다.
+
+### 3. 기술 스택 및 구현 (150자 내외)
+
+React 19, Vite, CSS, Vercel을 사용했습니다. 상태 기반 페이지 전환, 랜덤 문항/OTP 로직, 드래그 가능한 팝업, 타이머 유지, 마우스 반응형 바이러스 움직임 구현에 집중했습니다.
+
+### 4. 차별점 및 의의 (150자 내외)
+
+기존 웹 서비스처럼 편리함을 추구하지 않고, 일부러 불편하고 열받는 UX를 레트로 감성과 결합해 게임으로 만들었다는 점이 차별점입니다. 웹 인터랙션 자체를 콘텐츠로 확장할 수 있는 가능성이 있습니다.
+
+## 실행 방법
+
+```bash
+yarn install
+yarn dev
+```
+
+배포 빌드:
+
+```bash
+yarn build
+```

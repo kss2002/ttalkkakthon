@@ -6,6 +6,7 @@ function XpAlertDialog({
   icon = '!',
   confirmLabel = '확인',
   initialPosition = { x: 0, y: 0 },
+  blockBackdrop = false,
   onConfirm,
   onClose,
 }) {
@@ -35,7 +36,7 @@ function XpAlertDialog({
   };
 
   return (
-    <div className="xp-alert-overlay" role="presentation">
+    <div className={`xp-alert-overlay${blockBackdrop ? ' is-blocking' : ''}`} role="presentation">
       <section
         className={`xp-alert${isDragging ? ' is-dragging' : ''}`}
         role="alertdialog"
