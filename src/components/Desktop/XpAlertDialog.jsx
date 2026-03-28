@@ -1,7 +1,15 @@
 import { useState } from 'react';
 
-function XpAlertDialog({ message, onClose }) {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+function XpAlertDialog({
+  title = 'Windows',
+  message,
+  icon = '!',
+  confirmLabel = '확인',
+  initialPosition = { x: 0, y: 0 },
+  onConfirm,
+  onClose,
+}) {
+  const [position, setPosition] = useState(initialPosition);
   const [isDragging, setIsDragging] = useState(false);
 
   const handlePointerDown = (event) => {
@@ -37,7 +45,7 @@ function XpAlertDialog({ message, onClose }) {
         style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
       >
         <header className="xp-alert__titlebar" onPointerDown={handlePointerDown}>
-          <span id="xp-alert-title">Windows</span>
+          <span id="xp-alert-title">{title}</span>
           <button
             className="xp-alert__close"
             type="button"
@@ -51,7 +59,7 @@ function XpAlertDialog({ message, onClose }) {
 
         <div className="xp-alert__content">
           <div className="xp-alert__icon" aria-hidden="true">
-            !
+            {icon}
           </div>
           <p id="xp-alert-message" className="xp-alert__message">
             {message}
@@ -59,8 +67,8 @@ function XpAlertDialog({ message, onClose }) {
         </div>
 
         <footer className="xp-alert__actions">
-          <button className="xp-alert__button" type="button" onClick={onClose}>
-            확인
+          <button className="xp-alert__button" type="button" onClick={onConfirm ?? onClose}>
+            {confirmLabel}
           </button>
         </footer>
       </section>
