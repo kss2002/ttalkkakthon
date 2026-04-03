@@ -10,9 +10,6 @@
 - 핵심 기능 / 기획 내용: 윈도우 XP 스타일 UI 위에서 로그인, 추가 확인 절차, OTP, 바이러스 추격 등 일부러 불편하고 열받게 설계한 인터랙션 제공
 - 제작 방식 / 사용 도구: `OpenAI Codex`, `VS Code`
 - GitHub URL: <https://github.com/kss2002/ttalkkakthon>
-- 배포 URL: <https://ttalkkakthon-seven.vercel.app>
-- 데모 영상 링크: `추가 예정`
-- 추가 링크: `추가 예정`
 
 ## 프로젝트 소개
 
